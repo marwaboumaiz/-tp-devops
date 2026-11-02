@@ -21,6 +21,8 @@ def ajouter_tache():
     taches.append(tache)
     return jsonify(tache), 201
  
- 
+@app.get("/sante")
+def sante():
+    return jsonify(statut="ok") 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
